@@ -48,3 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
+#APP configuration files
+app.js
+
