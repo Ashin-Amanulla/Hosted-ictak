@@ -1,0 +1,13 @@
+.imgW > img {
+  width: 500px;
+}
+
+.companyfont h3 {
+  font-family: "arvo", sans-serif;
+  font-size: 60px;
+}
+
+h4 {
+  font-family: "Asap", sans-serif;
+  font-size: 30px;
+}
