@@ -8,7 +8,7 @@
                 <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
                     Reviews
                 </h6>
-                <button class="pt-1" (click)="deleteReview()"> <i class="fa fa-trash"></i></button>
+              
             </div>
             <!-- Primary Info  -->
             <hr class="mt-6 border-b-1 border-blueGray-300" />
@@ -124,8 +124,9 @@
 
 
             <!-- Fourth  -->
-            <div class="flex justify-center mt-6">
+            <div class="flex justify-content-evenly mt-6 pt-16">
                 <input class="button-84" type="submit" value="Submit">
+                <button class="pt-1" style="cursor: pointer; color: red;" (click)="deleteReview()"> <i class="fa fa-trash"></i> Delete!!!</button>
             </div>
         </form>
     </div>

@@ -7,7 +7,6 @@
                 <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
                     Associate Primary Info
                 </h6>
-                <button class="pt-1" (click)="deleteStaff($event)"> <i class="fa fa-trash"></i></button>
             </div>
 
             <!-- Primary Info  -->
@@ -215,6 +214,8 @@
             <!-- Fourth  -->
             <div class="flex justify-content-evenly mt-6 pt-16">
                 <input class="button-33" type="submit" value="Save">
+                <button style="cursor: pointer;color: red;" class="pt-1" (click)="deleteStaff($event)"> <i class="fa fa-trash"></i>Delete!!!</button>
+
             </div>
         </form>
     </div>
