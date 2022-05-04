@@ -50,12 +50,7 @@ export class CoursesComponent implements OnInit {
     'qualification': new FormControl(''),
   })
 
-partners=[
-
-'https://ictkerala.org/wp-content/uploads/2021/11/DSAKKEM-scaled.jpg',
-// 'https://ictkerala.org/wp-content/uploads/2021/11/DSAKKEM-scaled.jpg',
-
-]
+partners:any
 
 
   ngOnInit(): void {
@@ -68,13 +63,13 @@ partners=[
         this._heroService.getCourseByCode(this.code)
           .subscribe(data => {
             this.course = data;
-            console.log('type', typeof (this.course[0]), this.course[0])
+            this.partners=data[0].showboxArray
+            console.log("partners", this.partners)
 
             //to get reviews
             this._heroService.getReviews(this.course[0].title)
               .subscribe((review: any) => {
                 this.reviews = review;
-                console.log('reviews', this.reviews)
 
 
                 var sum = 0;
@@ -85,7 +80,6 @@ partners=[
 
                 avg = sum / this.reviews.length
                 this.averageReview = avg
-                console.log("ghfht", this.averageReview)
                 this.avgRound = Math.round(avg)
               });
 
@@ -109,7 +103,6 @@ partners=[
     let brochureReg = this.BrochureReg.value;
     this._heroService.getBrochure(brochureReg)
       .subscribe(res => {
-        console.log(res)
         if (res) {
           Swal.fire({
             icon: 'success',
@@ -118,7 +111,7 @@ partners=[
             timer: 1500
           })
             .then(() => {
-              window.open(this.course?.[0].course_brochure, "_blank");
+              window.open( this.course[0].brochure, "_blank");
             })
         }
         else {
@@ -144,7 +137,7 @@ partners=[
     touchDrag: false,
     pullDrag: false,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {

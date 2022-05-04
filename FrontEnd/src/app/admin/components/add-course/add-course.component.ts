@@ -88,7 +88,7 @@ export class AddCourseComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            this._router.navigate(['/admin/courses'])
+            this._router.navigate(['/admin/dashboard/courses'])
           })
         }
         else {
@@ -98,7 +98,7 @@ export class AddCourseComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            this._router.navigate(['/admin/courses'])
+            this._router.navigate(['/admin/dashboard/courses'])
           })
         }
       })

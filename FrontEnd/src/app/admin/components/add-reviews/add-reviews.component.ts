@@ -50,7 +50,7 @@ export class AddReviewsComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            this._router.navigate(['/admin/reviews'])
+            this._router.navigate(['/admin/dashboard/reviews'])
           })
         }
         else {
@@ -60,7 +60,7 @@ export class AddReviewsComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            this._router.navigate(['/admin/reviews'])
+            this._router.navigate(['/admin/dashboard/reviews'])
           })
         }
       })

@@ -48,5 +48,13 @@ export class SubscriptionTableComponent implements OnInit {
 
   }
 
+  deleteSubDetails(subID: any){
+    this._heroService.deleteSub(subID)
+    .subscribe(()=>{
+      this.subs = this.subs.filter(function (obj: { _id: any; }) {
+        return obj._id !== subID;
+      });    })
+  }
+
 
 }

@@ -44,7 +44,7 @@ export class BlogTableComponent implements OnInit {
   editBlog(blog: any) {
     localStorage.setItem('blog', blog._id.toString())
     
-    this._router.navigate(['/admin/blogs/edit-blog'])
+    this._router.navigate(['/admin/dashboard/blogs/edit-blog'])
   }
 
 
@@ -67,7 +67,7 @@ export class BlogTableComponent implements OnInit {
               showConfirmButton: false,
               timer: 1500
             }).then(() => {
-              this._router.navigate(['/admin/blogs'])
+              this._router.navigate(['/admin/dashboard/blogs'])
             })
           }
           else {
@@ -77,7 +77,7 @@ export class BlogTableComponent implements OnInit {
               showConfirmButton: false,
               timer: 1500
             }).then(() => {
-              this._router.navigate(['/admin/blogs'])
+              this._router.navigate(['/admin/dashboard/blogs'])
             })
           }
         })

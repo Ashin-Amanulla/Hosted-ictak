@@ -41,7 +41,7 @@ export class AddNewsComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            this._router.navigate(['/admin/news'])
+            this._router.navigate(['/admin/dashboard/news'])
           })
         }
         else {
@@ -51,7 +51,7 @@ export class AddNewsComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            this._router.navigate(['/admin/news'])
+            this._router.navigate(['/admin/dashboard/news'])
           })
         }
       })

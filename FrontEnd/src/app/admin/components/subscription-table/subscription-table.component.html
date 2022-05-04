@@ -41,16 +41,24 @@
                         Date
                     </th>
                     <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-                    [ngClass]="
+                        [ngClass]="
       color === 'light'
         ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
         : 'bg-red-800 text-red-300 border-red-700'
     ">
-                    Email
-                </th>
+                        Email
+                    </th>
+                    <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        [ngClass]="
+  color === 'light'
+    ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+    : 'bg-red-800 text-red-300 border-red-700'
+">
+                        Delete
+                    </th>
 
                 </tr>
-                
+
             </thead>
 
 
@@ -58,16 +66,23 @@
 
                 <tr *ngFor="let sub of subs">
 
-                    <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left  "
+                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 "
                         style="cursor:grab;">
                         {{sub.creation_date}}
-                    </th>
-                    <th
-                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+                    </td>
+                    <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
                         {{sub.email}}
-                    </th>
+                    </td>
 
-                  
+                    <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                        <a (click)="deleteSubDetails(sub._id)" style="cursor: pointer; color: red;"> <i
+                                class="fas fa-trash"></i></a>
+                    </td>
+
+
+
                 </tr>
 
             </tbody>

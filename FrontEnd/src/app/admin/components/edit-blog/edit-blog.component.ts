@@ -65,7 +65,7 @@ export class EditBlogComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('blog')
-            this._router.navigate(['/admin/blogs'])
+            this._router.navigate(['/admin/dashboard/blogs'])
           })
         }
         else {
@@ -76,7 +76,7 @@ export class EditBlogComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('blog')
-            this._router.navigate(['/admin/blogs'])
+            this._router.navigate(['/admin/dashboard/blogs'])
           })
         }
       })
@@ -98,7 +98,7 @@ export class EditBlogComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('blog')
-            this._router.navigate(['/admin/blogs'])
+            this._router.navigate(['/admin/dashboard/blogs'])
           })
         }
         else {
@@ -109,7 +109,7 @@ export class EditBlogComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('blog')
-            this._router.navigate(['/admin/blogs'])
+            this._router.navigate(['/admin/dashboard/blogs'])
           })
         }
       })

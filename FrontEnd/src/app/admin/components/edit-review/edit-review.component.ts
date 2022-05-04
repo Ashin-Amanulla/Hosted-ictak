@@ -72,7 +72,7 @@ export class EditReviewComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('review')
-            this._router.navigate(['/admin/reviews'])
+            this._router.navigate(['/admin/dashboard/reviews'])
           })
         }
         else {
@@ -83,7 +83,7 @@ export class EditReviewComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('review')
-            this._router.navigate(['/admin/reviews'])
+            this._router.navigate(['/admin/dashboard/reviews'])
           })
         }
       })
@@ -104,7 +104,7 @@ export class EditReviewComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('review')
-            this._router.navigate(['/admin/review'])
+            this._router.navigate(['/admin/dashboard/review'])
           })
         }
         else {
@@ -115,7 +115,7 @@ export class EditReviewComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('review')
-            this._router.navigate(['/admin/review'])
+            this._router.navigate(['/admin/dashboard/review'])
           })
         }
       })

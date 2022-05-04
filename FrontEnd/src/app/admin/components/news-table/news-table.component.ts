@@ -41,7 +41,7 @@ export class NewsTableComponent implements OnInit {
   editNews(news: any) {
     localStorage.setItem('news', news._id.toString())
 
-    this._router.navigate(['/admin/news/edit-news'])
+    this._router.navigate(['/admin/dashboard/news/edit-news'])
   }
 
 
@@ -64,7 +64,7 @@ export class NewsTableComponent implements OnInit {
               showConfirmButton: false,
               timer: 1500
             }).then(() => {
-              this._router.navigate(['/admin/new1s'])
+              this._router.navigate(['/admin/dashboard/new1s'])
             })
           }
           else {
@@ -74,7 +74,7 @@ export class NewsTableComponent implements OnInit {
               showConfirmButton: false,
               timer: 1500
             }).then(() => {
-              this._router.navigate(['/admin/new1s'])
+              this._router.navigate(['/admin/dashboard/new1s'])
             })
           }
         })

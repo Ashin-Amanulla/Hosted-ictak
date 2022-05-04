@@ -143,7 +143,7 @@ export class EditCourseComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('course')
-            this._router.navigate(['/admin/courses'])
+            this._router.navigate(['/admin/dashboard/courses'])
           })
         }
         else {
@@ -154,7 +154,7 @@ export class EditCourseComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('course')
-            this._router.navigate(['/admin/course'])
+            this._router.navigate(['/admin/dashboard/course'])
           })
         }
       })
@@ -176,7 +176,7 @@ export class EditCourseComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('course')
-            this._router.navigate(['/admin/courses'])
+            this._router.navigate(['/admin/dashboard/courses'])
           })
         }
         else {
@@ -187,7 +187,7 @@ export class EditCourseComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('course')
-            this._router.navigate(['/admin/course'])
+            this._router.navigate(['/admin/dashboard/course'])
           })
         }
       })

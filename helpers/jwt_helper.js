@@ -2,7 +2,7 @@ const JWT = require('jsonwebtoken')
 const createError = require('http-errors')
 
 module.exports = {
-    signAccessToken: (userId,role) => {
+    signAccessToken: (role) => {
         return new Promise((resolve, reject) => {
 
             const payload = {
@@ -10,17 +10,13 @@ module.exports = {
                 
             }
 
-            const secret = process.env.ACCESS_TOKEN_SECRET
+            const secret = 'secretCode123'
 
-            const options = {
-                expiresIn: '1hr', 
-                issuer: 'ict-academy.com',
-                audience: userId
-            }
+           
 
 
 
-            JWT.sign(payload, secret, options, (err, token) => {
+            JWT.sign(payload, secret,  (err, token) => {
                 if (err) {
                     console.log(err.message)
                     return reject(createError.InternalServerError())
@@ -38,8 +34,10 @@ module.exports = {
         const authHeader = req.headers['authorization']
         const bearerToken = authHeader.split(' ')
         const token = bearerToken[1]
-        JWT.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, payload) => {
+        console.log(token,'token')
+        JWT.verify(token, 'secretCode123', (err, payload) => {
             if (err) {
+                
                 const message = err.name === 'JsonWebTokenError' ? 'Unauthorized' : err.message
                 return next(createError.Unauthorized(message))
             }

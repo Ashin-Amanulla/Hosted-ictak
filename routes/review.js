@@ -4,6 +4,9 @@ const router = express.Router()
 
 const REVIEWDETAILS = require('../models/reviewData');
 
+const { verifyAccessToken } = require('../helpers/jwt_helper')
+
+
 
 
 
@@ -11,7 +14,7 @@ const REVIEWDETAILS = require('../models/reviewData');
 
 
 //Review Details Insert
-router.post('/addReview', async (req, res, next) => {
+router.post('/addReview', verifyAccessToken,async (req, res, next) => {
 
     try {
 
@@ -55,7 +58,7 @@ router.get('/getReviews', async (req, res, next) => {
 
 
 //Revie Details Insert
-router.post('/updateReview', async (req, res, next) => {
+router.post('/updateReview',verifyAccessToken, async (req, res, next) => {
 
     try {
 
@@ -88,7 +91,7 @@ router.post('/updateReview', async (req, res, next) => {
 
 
 //Delete Review
-router.post('/deleteReview', async (req, res, next) => {
+router.post('/deleteReview',verifyAccessToken, async (req, res, next) => {
 
     try {
         let id = req.body.id

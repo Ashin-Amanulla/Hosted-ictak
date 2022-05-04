@@ -5,6 +5,9 @@ const nodemailer = require("nodemailer");
 const COURSEDETAILS = require("../models/courseData");
 const BROCHUREDATA = require('../models/brochure')
 
+const { verifyAccessToken } = require('../helpers/jwt_helper')
+
+
 var transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -14,7 +17,7 @@ var transporter = nodemailer.createTransport({
 });
 
 //Course Details Insert
-router.post("/addCourse", async (req, res, next) => {
+router.post("/addCourse", verifyAccessToken, async (req, res, next) => {
   try {
     var indx;
 
@@ -69,7 +72,7 @@ router.post("/addCourse", async (req, res, next) => {
 });
 
 //Course List Fetch
-router.get("/getCourses", async (req, res, next) => {
+router.get("/getCourses",  async (req, res, next) => {
   try {
     const courseList = await COURSEDETAILS.find().sort({ index: 1 });
     res.send(courseList);
@@ -79,7 +82,7 @@ router.get("/getCourses", async (req, res, next) => {
 });
 
 //Course Details Insert
-router.post("/updateCourse", async (req, res, next) => {
+router.post("/updateCourse", verifyAccessToken,async (req, res, next) => {
   try {
     var item = {
       title: req.body.course.title,
@@ -123,7 +126,7 @@ router.post("/updateCourse", async (req, res, next) => {
 });
 
 //Delete Course
-router.post("/deleteCourse", async (req, res, next) => {
+router.post("/deleteCourse", verifyAccessToken, async (req, res, next) => {
   try {
     let id = req.body.id;
 
@@ -159,7 +162,7 @@ router.post("/getCourseByCode", async (req, res, next) => {
 
 //update Index
 
-router.put("/updateIndex", async (req, res, next) => {
+router.put("/updateIndex",verifyAccessToken, async (req, res, next) => {
   id = req.body._id;
   title = req.body.title;
   index = req.body.index;
@@ -203,6 +206,19 @@ router.get("/getBrochures", async (req, res, next) => {
   try {
     const brochureList = await BROCHUREDATA.find()
     res.send(brochureList);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+//Delete Brochure
+router.post("/deleteBrochure", verifyAccessToken, async (req, res, next) => {
+  try {
+    let id = req.body.brochureID;
+    console.log(id,"iddd")
+
+    const deleteCourse = await BROCHUREDATA.findByIdAndDelete({ _id: id });
+    res.send(deleteCourse);
   } catch (error) {
     console.log(error);
   }

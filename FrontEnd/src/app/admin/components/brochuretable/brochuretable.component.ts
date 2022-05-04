@@ -49,4 +49,12 @@ export class BrochuretableComponent implements OnInit {
  
   }
 
+  deleteBrochureDetails(brochureID: any){
+    this._heroService.deleteBrochure(brochureID)
+    .subscribe(()=>{
+      this.brochures = this.brochures.filter(function (obj: { _id: any; }) {
+        return obj._id !== brochureID;
+      });    })
+  }
+
 }

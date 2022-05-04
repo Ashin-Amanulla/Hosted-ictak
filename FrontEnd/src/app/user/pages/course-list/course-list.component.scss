@@ -23,3 +23,134 @@ h4 {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+
+//list
+
+/*
+ CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #8d8d8d;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: grey;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: grey;
+}
+
+.tabset > input:checked + label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+
+
+
+
+.container3{
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+
+/* list  */
+
+// news list
+
+.l-news {
+  width: 100%;
+  &__content {
+    align-items: center;
+    border-bottom: 1px solid gray;
+    // display: flex;
+    padding: 10px 0;
+    &:first-child {
+      border-top: 1px solid gray;
+    }
+    &__day {
+      margin-right: 25px;
+    }
+    &__label {
+      height: 25px;
+      line-height: 25px;
+      margin-right: 25px;
+      text-align: center;
+      width: 90px;
+    }
+  }
+}
+
+
+.p-news__content {
+  letter-spacing: 0.1em;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  &__day {
+    color: gray;
+    font-size: 10px;
+    // max-width: 60px;
+    min-width: 60px;
+  }
+  &__label {
+    background-color: #646464;
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: 14px;
+  }
+}
+

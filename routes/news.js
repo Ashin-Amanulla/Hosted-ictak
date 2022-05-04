@@ -5,11 +5,14 @@ const router = express.Router()
 const NEWSDETAILS = require('../models/newsData');
 const SUBSDETAILS = require('../models/subscriptionData')
 
+const { verifyAccessToken } = require('../helpers/jwt_helper')
+
+
 
 
 
 //news Details Insert
-router.post('/addNews', async (req, res, next) => {
+router.post('/addNews',verifyAccessToken, async (req, res, next) => {
 
     try {
 
@@ -60,7 +63,7 @@ router.get('/getNews', async (req, res, next) => {
 
 
 //Blog Details Upate
-router.post('/updateNews', async (req, res, next) => {
+router.post('/updateNews',verifyAccessToken, async (req, res, next) => {
 
     try {
 
@@ -88,7 +91,7 @@ router.post('/updateNews', async (req, res, next) => {
 
 
 //Delete Blog
-router.post('/deleteNews', async (req, res, next) => {
+router.post('/deleteNews', verifyAccessToken,async (req, res, next) => {
 
     try {
         let id = req.body.id
@@ -174,6 +177,19 @@ router.get('/getSubscriptions', async (req, res, next) => {
         console.log(error)
     }
 })
+
+//Delete Brochure
+router.post("/deleteSubscription", verifyAccessToken, async (req, res, next) => {
+    try {
+      let id = req.body.subID;
+  
+      const deleteSub = await SUBSDETAILS.findByIdAndDelete({ _id: id });
+      res.send(deleteSub);
+    } catch (error) {
+      console.log(error);
+    }
+  });
+  
 
 
 

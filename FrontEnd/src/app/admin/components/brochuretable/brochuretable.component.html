@@ -29,7 +29,7 @@
 
     <div class="block w-full overflow-x-auto">
         <!-- Projects table -->
-        <table class="items-center w-full bg-transparent border-collapse"id='excel-table'>
+        <table class="items-center w-full bg-transparent border-collapse" id='excel-table'>
             <thead>
                 <tr>
                     <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -73,13 +73,19 @@
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
             "> Qualifications</th>
+                    <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        [ngClass]="
+  color === 'light'
+    ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+    : 'bg-red-800 text-red-300 border-red-700'
+"> Delete</th>
                 </tr>
             </thead>
 
 
-            <tbody >
+            <tbody>
 
-                <tr *ngFor="let brochure of brochures" >
+                <tr *ngFor="let brochure of brochures">
 
                     <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left  "
                         style="cursor:grab;">
@@ -87,7 +93,7 @@
                     </th>
                     <th
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                       {{brochure.name}}
+                        {{brochure.name}}
                     </th>
 
                     <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
@@ -99,9 +105,12 @@
                     </td>
 
 
-                    <td
-                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            {{brochure.qualification}}
+                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                        {{brochure.qualification}}
+                    </td>
+                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                        <a (click)="deleteBrochureDetails(brochure._id)" style="cursor: pointer; color: red;"> <i
+                                class="fas fa-trash"></i></a>
                     </td>
                 </tr>
 

@@ -240,7 +240,7 @@ a > svg{
 
 .view_all{
   position: absolute;
-  bottom: 100px;
+  bottom: 50px;
   right: 100px;
 }
 
@@ -267,6 +267,8 @@ a > svg{
 	
 	flex-direction: column;
 	margin-bottom: 50px;
+
+  
 	&__imgBox {
 		display: flex;
 	justify-content: center;
@@ -301,6 +303,10 @@ a > svg{
 	}
   }
 
+
+  .glassBox>span{
+margin-bottom: 10px;
+  }
 
   .Box2{
     transition: all 0.2s ease-in;

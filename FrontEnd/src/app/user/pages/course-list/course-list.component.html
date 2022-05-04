@@ -11,7 +11,7 @@
             25K students & 10K teachers and a similar number of executives being trained by us, we have created a unique
             hybrid model called Positive Engagement in Real-Time Learning (PERL) model that has produced over 4.5
             positive feedback ratings for the training that were conducted by ICT Academy of Kerala amongst its
-            learners.
+            learners..
         </p>
     </div>
 
@@ -23,7 +23,7 @@
 </div>
 
 
-<!-- Partnership   -->
+<!-- Postgraduate   -->
 
 
 <div class="flex flex-wrap items-center pb-32 container-2 bg-blueGray-100">
@@ -53,10 +53,41 @@
     </div>
 
 </div>
+<div class="container3 pb-16 bg-blueGray-100">
+
+
+    <div class="tabset">
+        <div class="flex flex-wrap items-center ">
+            <div class="w-full  px-4 mr-auto ml-auto mt-20 ">
+                <div class="justify-center flex flex-wrap relative ">
+
+                    <ul class="l-news ">
+                        <ng-container *ngFor="let course of courses">
+                            <li class="l-news__content p-news__content" *ngIf="course.category=='Postgraduate Programs'"
+                                (click)=" singlePage(course.code)">
+                                <!-- <div class="l-news__content__day p-news__content__day">{{new1.date}}</div> -->
+                                <!-- <div  ><span class="badge badge-success">{{course.status}}</span> </div> -->
+
+                                <div class="l-news__content__text p-news__content__text">{{course.title}} <i
+                                        class="fas fa-arrow-right  " aria-hidden="true"></i></div>
+
+                            </li>
+                        </ng-container>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
 
 <!-- Delivery    -->
 
-<div class="flex flex-wrap items-center pb-32 container-2">
+<div class="flex flex-wrap items-center container-2">
     <div class="w-full md:w-6/12 px-12 md:px-4 ml-auto mr-auto mt-20 companyfont">
         <h4 class=" mb-2 font-semibold leading-normal ">
             Long-term Training
@@ -80,8 +111,37 @@
     </div>
 
 </div>
+<div class="container3 pb-16">
 
-<!-- Management   -->
+
+    <div class="tabset">
+        <div class="flex flex-wrap items-center ">
+            <div class="w-full  px-4 mr-auto ml-auto mt-20 ">
+                <div class="justify-center flex flex-wrap relative ">
+
+                    <ul class="l-news ">
+                        <ng-container *ngFor="let course of courses">
+                            <li class="l-news__content p-news__content" *ngIf="course.category=='Long-term Training'"
+                                (click)=" singlePage(course.code)">
+                                <!-- <div class="l-news__content__day p-news__content__day">{{new1.date}}</div> -->
+
+                                <div class="l-news__content__text p-news__content__text">{{course.title}} <i
+                                        class="fas fa-arrow-right  " aria-hidden="true"></i></div>
+
+                            </li>
+                        </ng-container>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<!-- Microskills   -->
 
 
 <div class="flex flex-wrap items-center pb-32 container-2 bg-blueGray-100">
@@ -109,6 +169,38 @@
     </div>
 
 </div>
+
+<div class="container3 pb-16 bg-blueGray-100">
+
+
+    <div class="tabset">
+        <div class="flex flex-wrap items-center ">
+            <div class="w-full  px-4 mr-auto ml-auto mt-20 ">
+                <div class="justify-center flex flex-wrap relative ">
+
+                    <ul class="l-news ">
+                        <ng-container *ngFor="let course of courses">
+                            <li class="l-news__content p-news__content" *ngIf="course.category=='Microskills Programs'"
+                                (click)=" singlePage(course.code)">
+                                <!-- <div class="l-news__content__day p-news__content__day">{{new1.date}}</div> -->
+                                <!-- <div  ><span class="badge badge-success">{{course.status}}</span> </div> -->
+
+                                <div class="l-news__content__text p-news__content__text">{{course.title}} <i
+                                        class="fas fa-arrow-right  " aria-hidden="true"></i></div>
+
+                            </li>
+                        </ng-container>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
 <!-- Delivery    -->
 
 <div class="flex flex-wrap items-center pb-32 container-2">
@@ -131,6 +223,39 @@
     </div>
 
 </div>
+
+
+<div class="container3 pb-16">
+
+
+    <div class="tabset">
+        <div class="flex flex-wrap items-center ">
+            <div class="w-full  px-4 mr-auto ml-auto mt-20 ">
+                <div class="justify-center flex flex-wrap relative ">
+
+                    <ul class="l-news ">
+                        <ng-container *ngFor="let course of courses">
+                            <li class="l-news__content p-news__content" *ngIf="course.category=='Short-term Programs'"
+                                (click)=" singlePage(course.code)">
+                                <!-- <div class="l-news__content__day p-news__content__day">{{new1.date}}</div> -->
+                                <div  ><span class="badge badge-success">{{course.sub}}</span> </div>
+
+                                <div class="l-news__content__text p-news__content__text">{{course.title}} <i
+                                        class="fas fa-arrow-right  " aria-hidden="true"></i></div>
+
+                            </li>
+                        </ng-container>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
 
 <!-- Partnership   -->
 
@@ -162,6 +287,37 @@
     </div>
 
 </div>
+<div class="container3 pb-16 bg-blueGray-100">
+
+
+    <div class="tabset">
+        <div class="flex flex-wrap items-center ">
+            <div class="w-full  px-4 mr-auto ml-auto mt-20 ">
+                <div class="justify-center flex flex-wrap relative ">
+
+                    <ul class="l-news ">
+                        <ng-container *ngFor="let course of courses">
+                            <li class="l-news__content p-news__content" *ngIf="course.category=='Addon Programs'"
+                                (click)=" singlePage(course.code)">
+                                <!-- <div class="l-news__content__day p-news__content__day">{{new1.date}}</div> -->
+                                <!-- <div  ><span class="badge badge-success">{{course.status}}</span> </div> -->
+
+                                <div class="l-news__content__text p-news__content__text">{{course.title}} <i
+                                        class="fas fa-arrow-right  " aria-hidden="true"></i></div>
+
+                            </li>
+                        </ng-container>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
 
 <!-- Delivery    -->
 
@@ -186,6 +342,38 @@
 
 </div>
 
+<div class="container3 pb-16">
+
+
+    <div class="tabset">
+        <div class="flex flex-wrap items-center ">
+            <div class="w-full  px-4 mr-auto ml-auto mt-20 ">
+                <div class="justify-center flex flex-wrap relative ">
+
+                    <ul class="l-news ">
+                        <ng-container *ngFor="let course of courses">
+                            <li class="l-news__content p-news__content" *ngIf="course.category=='Internships'"
+                                (click)=" singlePage(course.code)">
+                                <!-- <div class="l-news__content__day p-news__content__day">{{new1.date}}</div> -->
+                                <!-- <div  ><span class="badge badge-success">{{course.status}}</span> </div> -->
+
+                                <div class="l-news__content__text p-news__content__text">{{course.title}} <i
+                                        class="fas fa-arrow-right  " aria-hidden="true"></i></div>
+
+                            </li>
+                        </ng-container>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
 <!-- Management   -->
 
 
@@ -207,6 +395,37 @@
             The unit facilitates the delivery of skill development programs through partners. The team owns, manages and
             executes various programmes in association with the Knowledge Office of ICT Academy of Kerala.
         </p>
+
+
+    </div>
+
+</div>
+
+<div class="container3 pb-16 bg-blueGray-100">
+
+
+    <div class="tabset">
+        <div class="flex flex-wrap items-center ">
+            <div class="w-full  px-4 mr-auto ml-auto mt-20 ">
+                <div class="justify-center flex flex-wrap relative ">
+
+                    <ul class="l-news ">
+                        <ng-container *ngFor="let course of courses">
+                            <li class="l-news__content p-news__content" *ngIf="course.category=='Workforce Enablement Programs'"
+                                (click)=" singlePage(course.code)">
+                                <!-- <div class="l-news__content__day p-news__content__day">{{new1.date}}</div> -->
+                                <!-- <div  ><span class="badge badge-success">{{course.status}}</span> </div> -->
+
+                                <div class="l-news__content__text p-news__content__text">{{course.title}} <i
+                                        class="fas fa-arrow-right  " aria-hidden="true"></i></div>
+
+                            </li>
+                        </ng-container>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
 
 
     </div>

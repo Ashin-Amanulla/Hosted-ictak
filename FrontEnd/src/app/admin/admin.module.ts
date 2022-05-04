@@ -53,6 +53,10 @@ import { BrochureComponent } from './pages/brochure/brochure.component';
 import { SubscriptionsComponent } from './pages/subscriptions/subscriptions.component';
 import { SubscriptionTableComponent } from './components/subscription-table/subscription-table.component';
 import { LoginComponent } from './components/login/login.component';
+import { HeroAdminService } from './hero-admin.service';
+import { AuthGuard } from './auth.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorService } from './token-interceptor.service';
 
 @NgModule({
     declarations: [
@@ -115,6 +119,12 @@ import { LoginComponent } from './components/login/login.component';
         
         
     
-    ]
+    ],
+    providers: [HeroAdminService, AuthGuard,
+        {
+          provide: HTTP_INTERCEPTORS,
+          useClass: TokenInterceptorService,
+          multi: true
+        }],
 })
 export class AdminModule { }

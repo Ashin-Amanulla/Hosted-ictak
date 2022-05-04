@@ -54,7 +54,7 @@ export class AddStaffComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            this._router.navigate(['/admin/staffs'])
+            this._router.navigate(['/admin/dashboard/staffs'])
           })
         }
         else {
@@ -64,7 +64,7 @@ export class AddStaffComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            this._router.navigate(['/admin/staffs'])
+            this._router.navigate(['/admin/dashboard/staffs'])
           })
         }
       })

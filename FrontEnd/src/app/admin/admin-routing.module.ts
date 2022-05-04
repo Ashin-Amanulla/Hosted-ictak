@@ -20,19 +20,23 @@ import { EditNewsComponent } from './components/edit-news/edit-news.component';
 import { BrochureComponent } from './pages/brochure/brochure.component';
 import { SubscriptionsComponent } from './pages/subscriptions/subscriptions.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
-    path: '', component: AdminComponent, children: [
+    path: '', component: LoginComponent
+  },
+
+  {
+
+    path: 'dashboard', component: AdminComponent, canActivate: [AuthGuard ] , children: [
 
       {
         path: 'dashboard', component: DashboardComponent
       },
+
       {
-        path: 'login', component: LoginComponent
-      },
-      {
-        path: '', redirectTo: 'login', pathMatch: 'full'
+        path: '', redirectTo: 'dashboard', pathMatch: 'full'
       },
       {
         path: 'courses', component: CoursesComponent
@@ -80,10 +84,10 @@ const routes: Routes = [
         path: 'news/edit-news', component: EditNewsComponent
       },
       {
-        path: 'brochure', component:BrochureComponent
+        path: 'brochure', component: BrochureComponent
       },
       {
-        path: 'subs', component:SubscriptionsComponent
+        path: 'subs', component: SubscriptionsComponent
       },
 
     ]

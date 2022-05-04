@@ -40,7 +40,7 @@ export class StaffTableComponent implements OnInit {
 
   editStaff(staff: any) {
     localStorage.setItem('staff', staff._id.toString())
-    this._router.navigate(['/admin/staffs/edit-staff'])
+    this._router.navigate(['/admin/dashboard/staffs/edit-staff'])
   }
 
 
@@ -63,7 +63,7 @@ export class StaffTableComponent implements OnInit {
               showConfirmButton: false,
               timer: 1500
             }).then(() => {
-              this._router.navigate(['/admin/staffs'])
+              this._router.navigate(['/admin/dashboard/staffs'])
             })
           }
           else {
@@ -73,7 +73,7 @@ export class StaffTableComponent implements OnInit {
               showConfirmButton: false,
               timer: 1500
             }).then(() => {
-              this._router.navigate(['/admin/staffs'])
+              this._router.navigate(['/admin/dashboard/staffs'])
             })
           }
         })

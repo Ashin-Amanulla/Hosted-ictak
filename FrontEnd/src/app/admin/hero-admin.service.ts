@@ -1,16 +1,49 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
+import jwt_decode from "jwt-decode"
+
+
+interface MyToken {
+  role: string;
+  iat: number;
+  exp: number;
+  aud: string;
+  iss: string
+  // whatever else is in the JWT.
+}
 
 
 @Injectable({
   providedIn: 'root'
 })
+
+
+
+
 export class HeroAdminService {
 
   constructor(private http: HttpClient) { }
 
   server_address: string ='/api';
   // server_address: string = "http://localhost:8887/api"
+
+ //Admin Role Check
+ isAdmin() {
+  var token = localStorage.getItem('accessToken') || '';
+  var user = jwt_decode<MyToken>(token);
+  return user.role === 'ADMIN' ? true : false;
+}
+
+//check Presence of Token  
+isLoggedIn() {
+  return !!localStorage.getItem('accessToken');
+}
+
+//retrive Token for token interception
+getToken() {
+  return localStorage.getItem('accessToken')
+}
+
 
 
   //Course
@@ -147,8 +180,23 @@ getBrochures() {
   return this.http.get<any>(`${this.server_address}/course/getBrochures`);
 };
 
+deleteBrochure(brochureID: any){
+  return this.http.post<any>(`${this.server_address}/course/deleteBrochure`,{brochureID:brochureID});
+
+}
+
 //Subscriptions
 getSubscriptions() {
   return this.http.get<any>(`${this.server_address}/news/getSubscriptions`);
 };
+
+deleteSub(subID: any){
+  return this.http.post<any>(`${this.server_address}/news/deleteSubscription`,{subID:subID});
+
+}
+
+
+loginCheck(data:any){
+  return this.http.post<any>(`${this.server_address}/login`,{data:data});
+}
 }

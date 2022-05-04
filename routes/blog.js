@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router()
 const BLOGDETAILS = require('../models/BlogData');
+const { verifyAccessToken } = require('../helpers/jwt_helper')
+
 
 
 
 
 //blog Details Insert
-router.post('/addBlog', async (req, res, next) => {
+router.post('/addBlog',verifyAccessToken, async (req, res, next) => {
 
     try {
 
@@ -57,7 +59,7 @@ router.get('/getBlogs', async (req, res, next) => {
 
 
 //Blog Details Upate
-router.post('/updateBlog', async (req, res, next) => {
+router.post('/updateBlog', verifyAccessToken, async (req, res, next) => {
 
     try {
 
@@ -88,7 +90,7 @@ router.post('/updateBlog', async (req, res, next) => {
 
 
 //Delete Blog
-router.post('/deleteBlog', async (req, res, next) => {
+router.post('/deleteBlog',verifyAccessToken, async (req, res, next) => {
 
     try {
         let id = req.body.id

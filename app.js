@@ -19,6 +19,7 @@ const review = require('./routes/review')
 const blog = require('./routes/blog')
 const news = require('./routes/news')
 const am = require('./routes/academicMembership')
+const login = require('./routes/login')
 
 
 
@@ -51,6 +52,7 @@ app.use(function (req, res, next) {
 
 
 
+
 //Use route
 
 app.use('/api/course', course);
@@ -59,6 +61,8 @@ app.use('/api/review', review)
 app.use('/api/blog',blog)
 app.use('/api/news',news)
 app.use('/api/am',am)
+app.use('/api/login',login)
+
 
 
 

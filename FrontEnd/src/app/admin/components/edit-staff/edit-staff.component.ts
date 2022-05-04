@@ -75,7 +75,7 @@ export class EditStaffComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('staff')
-            this._router.navigate(['/admin/staffs'])
+            this._router.navigate(['/admin/dashboard/staffs'])
           })
         }
         else {
@@ -86,7 +86,7 @@ export class EditStaffComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('staff')
-            this._router.navigate(['/admin/staffs'])
+            this._router.navigate(['/admin/dashboard/staffs'])
           })
         }
       })
@@ -111,7 +111,7 @@ export class EditStaffComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('staff')
-            this._router.navigate(['/admin/staffs'])
+            this._router.navigate(['/admin/dashboard/staffs'])
           })
         }
         else {
@@ -122,7 +122,7 @@ export class EditStaffComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('staff')
-            this._router.navigate(['/admin/staffs'])
+            this._router.navigate(['/admin/dashboard/staffs'])
           })
         }
       })

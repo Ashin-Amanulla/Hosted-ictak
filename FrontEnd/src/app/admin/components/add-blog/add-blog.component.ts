@@ -48,7 +48,7 @@ export class AddBlogComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            this._router.navigate(['/admin/blogs'])
+            this._router.navigate(['/admin/dashboard/blogs'])
           })
         }
         else {
@@ -58,7 +58,7 @@ export class AddBlogComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            this._router.navigate(['/admin/blogs'])
+            this._router.navigate(['/admin/dashboard/blogs'])
           })
         }
       })

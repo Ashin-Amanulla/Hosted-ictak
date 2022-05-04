@@ -37,6 +37,6 @@ export class ReviewTableComponent implements OnInit {
 
   editReview(review: any) {
     localStorage.setItem('review', review._id.toString())
-    this.router.navigate(['/admin/reviews/edit-review'])
+    this.router.navigate(['/admin/dashboard/reviews/edit-review'])
   }
 }

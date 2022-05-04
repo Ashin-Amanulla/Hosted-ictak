@@ -3,13 +3,14 @@ const router = express.Router()
 
 
 const STAFFDETAILS = require('../models/staffData');
+const { verifyAccessToken } = require('../helpers/jwt_helper')
 
 
 
 
 
 //Staff Details Insert
-router.post('/addStaff', async (req, res, next) => {
+router.post('/addStaff',verifyAccessToken, async (req, res, next) => {
 
     try {
 
@@ -70,7 +71,7 @@ router.get('/getStaffs', async (req, res, next) => {
 
 
 //Course Details Insert
-router.post('/updateStaff', async (req, res, next) => {
+router.post('/updateStaff',verifyAccessToken, async (req, res, next) => {
 
     try {
 
@@ -109,7 +110,7 @@ router.post('/updateStaff', async (req, res, next) => {
 
 
 //Delete Course
-router.post('/deleteStaff', async (req, res, next) => {
+router.post('/deleteStaff',verifyAccessToken, async (req, res, next) => {
 
     try {
         let id = req.body.id

@@ -39,7 +39,7 @@ export class CourseTableComponent implements OnInit {
   // edit 
   editCourse(course: any) {
     localStorage.setItem('course', course._id.toString())
-    this._router.navigate(['/admin/courses/edit-course'])
+    this._router.navigate(['/admin/dashboard/courses/edit-course'])
 
   }
 
@@ -62,7 +62,7 @@ export class CourseTableComponent implements OnInit {
               showConfirmButton: false,
               timer: 1500
             }).then(() => {
-              this._router.navigate(['/admin/courses'])
+              this._router.navigate(['/admin/dashboard/courses'])
             })
           }
           else {
@@ -72,7 +72,7 @@ export class CourseTableComponent implements OnInit {
               showConfirmButton: false,
               timer: 1500
             }).then(() => {
-              this._router.navigate(['/admin/courses'])
+              this._router.navigate(['/admin/dashboard/courses'])
             })
           }
         })

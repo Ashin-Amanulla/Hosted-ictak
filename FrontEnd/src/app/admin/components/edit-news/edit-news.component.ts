@@ -57,7 +57,7 @@ export class EditNewsComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('news')
-            this._router.navigate(['/admin/news'])
+            this._router.navigate(['/admin/dashboard/news'])
           })
         }
         else {
@@ -68,7 +68,7 @@ export class EditNewsComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('news')
-            this._router.navigate(['/admin/news'])
+            this._router.navigate(['/admin/dashboard/news'])
           })
         }
       })
@@ -90,7 +90,7 @@ export class EditNewsComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('news')
-            this._router.navigate(['/admin/news'])
+            this._router.navigate(['/admin/dashboard/news'])
           })
         }
         else {
@@ -101,7 +101,7 @@ export class EditNewsComponent implements OnInit {
             timer: 1500
           }).then(() => {
             localStorage.removeItem('news')
-            this._router.navigate(['/admin/news'])
+            this._router.navigate(['/admin/dashboard/news'])
           })
         }
       })

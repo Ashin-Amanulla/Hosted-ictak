@@ -60,8 +60,8 @@
             <div class="home text">
 
                <div class="row ">
-                  <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Postgraduate Programs'">
+                  <ng-container *ngFor="let course of courses ;let i = index">
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Postgraduate Programs' && i< 6">
                         <a style="cursor: pointer;" (click)="singlePage(course.code)">
                            <div class="glassBox">
                               <div class="glassBox__imgBox">
@@ -82,14 +82,15 @@
 
             <div class="blog text">
                <div class="row ">
-                  <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Long-term Training'">
+                  <ng-container *ngFor="let course of courses ;let i = index">
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Long-term Training' && i< 6">
                               <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
                                  <div class="glassBox">
                                     <div class="glassBox__imgBox">
                                        <img src={{course.image}} alt="">
                                        <p class="glassBox__title">{{course.title}}</p>
+                                        
                                     </div>
 
                                  </div>
@@ -104,8 +105,8 @@
 
             <div class="help text">
                <div class="row ">
-                  <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Microskills Programs'">
+                  <ng-container *ngFor="let course of courses ;let i = index">
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Microskills Programs' && i< 6">
                               <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
                                  <div class="glassBox">
@@ -127,8 +128,8 @@
             <div class="code text">
 
                <div class="row ">
-                  <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Short-term Programs'">
+                  <ng-container *ngFor="let course of courses ;let i = index">
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Short-term Programs' && i< 6">
                               <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
                                  <div class="glassBox">
@@ -152,8 +153,8 @@
             <div class="about text">
 
                <div class="row ">
-                  <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Addon Programs'">
+                  <ng-container *ngFor="let course of courses ;let i = index">
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Addon Programs' && i< 6">
                               <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
                                  <div class="glassBox">
@@ -178,8 +179,8 @@
             <div class="intern text">
 
                <div class="row ">
-                  <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Internships'">
+                  <ng-container *ngFor="let course of courses ;let i = index">
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Internships' && i< 6">
                               <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
                                  <div class="glassBox">
@@ -204,8 +205,8 @@
             <div class="work text">
 
                <div class="row ">
-                  <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Workforce Enablement Programs'">
+                  <ng-container *ngFor="let course of courses ;let i = index">
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Workforce Enablement Programs' && i< 6">
                               <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
                                  <div class="glassBox">
@@ -229,7 +230,7 @@
          <div class="view_all">
             <a routerLink="courses" class="flex items-center justify-center"
                (click)=" this.emitData.emit('hide Modal!');">
-               <span class="flex items-center justify-center "> View all Courses&nbsp;
+               <span class="flex items-center justify-center "> View all courses&nbsp;
                   <i class="fas fa-arrow-right  " aria-hidden="true"></i>
                </span>
             </a>

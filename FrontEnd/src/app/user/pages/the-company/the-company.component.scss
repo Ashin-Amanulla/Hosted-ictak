@@ -177,12 +177,16 @@ a:hover {
     flex-direction: column;
     padding-left: 50px;
     color:rgb(70, 69, 69);
-    font-weight: 700;
-    font-size: larger;
+    font-weight: 400;
+    font-size: medium;
     margin-bottom: 100px;
 
     ol{
       list-style-type:decimal;
+      padding-bottom: 12px;
+      li {
+padding-bottom: 10px;
+      }
     }
   }
 }
