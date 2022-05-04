@@ -19,6 +19,7 @@ import { AddNewsComponent } from './components/add-news/add-news.component';
 import { EditNewsComponent } from './components/edit-news/edit-news.component';
 import { BrochureComponent } from './pages/brochure/brochure.component';
 import { SubscriptionsComponent } from './pages/subscriptions/subscriptions.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,10 @@ const routes: Routes = [
         path: 'dashboard', component: DashboardComponent
       },
       {
-        path: '', redirectTo: 'dashboard', pathMatch: 'full'
+        path: 'login', component: LoginComponent
+      },
+      {
+        path: '', redirectTo: 'login', pathMatch: 'full'
       },
       {
         path: 'courses', component: CoursesComponent

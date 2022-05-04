@@ -52,6 +52,7 @@ import { BrochuretableComponent } from './components/brochuretable/brochuretable
 import { BrochureComponent } from './pages/brochure/brochure.component';
 import { SubscriptionsComponent } from './pages/subscriptions/subscriptions.component';
 import { SubscriptionTableComponent } from './components/subscription-table/subscription-table.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
     declarations: [
@@ -99,6 +100,7 @@ import { SubscriptionTableComponent } from './components/subscription-table/subs
         BrochureComponent,
         SubscriptionsComponent,
         SubscriptionTableComponent,
+        LoginComponent,
 
 
 
