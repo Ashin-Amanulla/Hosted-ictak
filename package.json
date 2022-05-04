@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.js"
   },
-  "author": "Ashin",
+  "author": "Ashin Amanulla",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
