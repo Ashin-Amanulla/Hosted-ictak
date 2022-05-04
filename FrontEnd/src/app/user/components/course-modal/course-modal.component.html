@@ -62,15 +62,15 @@
                <div class="row ">
                   <ng-container *ngFor="let course of courses">
                      <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Postgraduate Programs'">
-                        <a style="cursor: pointer;"   >
+                        <a style="cursor: pointer;" (click)="singlePage(course.code)">
                            <div class="glassBox">
-                               <div class="glassBox__imgBox">
-                                   <img src={{course.image}} alt="">
-                                   <p class="glassBox__title">{{course.title}}</p>
-                               </div>
-                             
+                              <div class="glassBox__imgBox">
+                                 <img src={{course.image}} alt="">
+                                 <p class="glassBox__title">{{course.title}}</p>
+                              </div>
+
                            </div>
-                       </a>
+                        </a>
                      </div>
                   </ng-container>
                </div>
@@ -83,16 +83,18 @@
             <div class="blog text">
                <div class="row ">
                   <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12" *ngIf="course.category=='Long-term Training'">
-                        <div class="card">
-                           <div class="content2 ">
-                              <a (click)="singlePage(course.code)">
-                                 <h4>{{course.title}}</h4>
-                                 <i class="fas fa-arrow-right " aria-hidden="true"></i>
-                              </a>
-                           </div>
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Long-term Training'">
+                              <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
-                        </div>
+                                 <div class="glassBox">
+                                    <div class="glassBox__imgBox">
+                                       <img src={{course.image}} alt="">
+                                       <p class="glassBox__title">{{course.title}}</p>
+                                    </div>
+
+                                 </div>
+                              </a>
+                        
                      </div>
                   </ng-container>
                </div>
@@ -103,16 +105,18 @@
             <div class="help text">
                <div class="row ">
                   <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12" *ngIf="course.category=='Microskills Programs'">
-                        <div class="card">
-                           <div class="content2 ">
-                              <a (click)="singlePage(course.code)">
-                                 <h4>{{course.title}}</h4>
-                                 <i class="fas fa-arrow-right " aria-hidden="true"></i>
-                              </a>
-                           </div>
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Microskills Programs'">
+                              <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
-                        </div>
+                                 <div class="glassBox">
+                                    <div class="glassBox__imgBox">
+                                       <img src={{course.image}} alt="">
+                                       <p class="glassBox__title">{{course.title}}</p>
+                                    </div>
+
+                                 </div>
+                              </a>
+                           
                      </div>
                   </ng-container>
                </div>
@@ -124,16 +128,18 @@
 
                <div class="row ">
                   <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12" *ngIf="course.category=='Short-term Programs'">
-                        <div class="card">
-                           <div class="content2 ">
-                              <a (click)="singlePage(course.code)">
-                                 <h4>{{course.title}}</h4>
-                                 <i class="fas fa-arrow-right " aria-hidden="true"></i>
-                              </a>
-                           </div>
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Short-term Programs'">
+                              <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
-                        </div>
+                                 <div class="glassBox">
+                                    <div class="glassBox__imgBox">
+                                       <img src={{course.image}} alt="">
+                                       <p class="glassBox__title">{{course.title}}</p>
+                                    </div>
+
+                                 </div>
+                              </a>
+                         
                      </div>
                   </ng-container>
                </div>
@@ -147,16 +153,18 @@
 
                <div class="row ">
                   <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12" *ngIf="course.category=='Addon Programs'">
-                        <div class="card">
-                           <div class="content2 ">
-                              <a (click)="singlePage(course.code)">
-                                 <h4>{{course.title}}</h4>
-                                 <i class="fas fa-arrow-right " aria-hidden="true"></i>
-                              </a>
-                           </div>
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Addon Programs'">
+                              <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
-                        </div>
+                                 <div class="glassBox">
+                                    <div class="glassBox__imgBox">
+                                       <img src={{course.image}} alt="">
+                                       <p class="glassBox__title">{{course.title}}</p>
+                                    </div>
+
+                                 </div>
+                              </a>
+                         
                      </div>
                   </ng-container>
                </div>
@@ -171,16 +179,18 @@
 
                <div class="row ">
                   <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12" *ngIf="course.category=='Internships'">
-                        <div class="card">
-                           <div class="content2 ">
-                              <a (click)="singlePage(course.code)">
-                                 <h4>{{course.title}}</h4>
-                                 <i class="fas fa-arrow-right " aria-hidden="true"></i>
-                              </a>
-                           </div>
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Internships'">
+                              <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
-                        </div>
+                                 <div class="glassBox">
+                                    <div class="glassBox__imgBox">
+                                       <img src={{course.image}} alt="">
+                                       <p class="glassBox__title">{{course.title}}</p>
+                                    </div>
+
+                                 </div>
+                              </a>
+                         
                      </div>
                   </ng-container>
                </div>
@@ -195,16 +205,18 @@
 
                <div class="row ">
                   <ng-container *ngFor="let course of courses">
-                     <div class="col-lg-4 col-md-6 col-sm-12" *ngIf="course.category=='Workforce Enablement Programs'">
-                        <div class="card">
-                           <div class="content2 ">
-                              <a (click)="singlePage(course.code)">
-                                 <h4>{{course.title}}</h4>
-                                 <i class="fas fa-arrow-right " aria-hidden="true"></i>
-                              </a>
-                           </div>
+                     <div class="col-lg-4 col-md-6 col-sm-12 Box2" *ngIf="course.category=='Workforce Enablement Programs'">
+                              <a style="cursor: pointer;" (click)="singlePage(course.code)">
 
-                        </div>
+                                 <div class="glassBox">
+                                    <div class="glassBox__imgBox">
+                                       <img src={{course.image}} alt="">
+                                       <p class="glassBox__title">{{course.title}}</p>
+                                    </div>
+
+                                 </div>
+                              </a>
+                        
                      </div>
                   </ng-container>
                </div>
