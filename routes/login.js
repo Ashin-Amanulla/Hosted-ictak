@@ -5,6 +5,8 @@ const { signAccessToken,
     signRefreshToken,
     verifyRefreshToken } = require('../helpers/jwt_helper')
 
+//! Currently deactivated since a bug has occured after hosting.Please refer news route 
+
 
 router.post('/login', async (req, res, next) => {
 

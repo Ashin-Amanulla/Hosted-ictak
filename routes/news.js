@@ -5,14 +5,15 @@ const router = express.Router()
 const NEWSDETAILS = require('../models/newsData');
 const SUBSDETAILS = require('../models/subscriptionData')
 
-const { verifyAccessToken } = require('../helpers/jwt_helper')
+const { signAccessToken,
+    verifyAccessToken } = require('../helpers/jwt_helper')
 
 
 
 
 
 //news Details Insert
-router.post('/addNews',verifyAccessToken, async (req, res, next) => {
+router.post('/addNews', verifyAccessToken, async (req, res, next) => {
 
     try {
 
@@ -63,7 +64,7 @@ router.get('/getNews', async (req, res, next) => {
 
 
 //Blog Details Upate
-router.post('/updateNews',verifyAccessToken, async (req, res, next) => {
+router.post('/updateNews', verifyAccessToken, async (req, res, next) => {
 
     try {
 
@@ -91,7 +92,7 @@ router.post('/updateNews',verifyAccessToken, async (req, res, next) => {
 
 
 //Delete Blog
-router.post('/deleteNews', verifyAccessToken,async (req, res, next) => {
+router.post('/deleteNews', verifyAccessToken, async (req, res, next) => {
 
     try {
         let id = req.body.id
@@ -138,7 +139,7 @@ router.put('/updateIndex', async (req, res, next) => {
 //subscriptions
 
 router.post('/saveSubs', async (req, res, next) => {
-    
+
 
 
     try {
@@ -181,16 +182,47 @@ router.get('/getSubscriptions', async (req, res, next) => {
 //Delete Brochure
 router.post("/deleteSubscription", verifyAccessToken, async (req, res, next) => {
     try {
-      let id = req.body.subID;
-  
-      const deleteSub = await SUBSDETAILS.findByIdAndDelete({ _id: id });
-      res.send(deleteSub);
-    } catch (error) {
-      console.log(error);
-    }
-  });
-  
+        let id = req.body.subID;
 
+        const deleteSub = await SUBSDETAILS.findByIdAndDelete({ _id: id });
+        res.send(deleteSub);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+
+
+
+//!   Temporary keeping login route since there is an issue after hosting 
+
+router.post('/login', async (req, res, next) => {
+
+    try {
+
+        let email = req.body.data.email;
+        let password = req.body.data.password
+
+        if (email != 'admin@ictak' || password != 'ictakAdmin@12345') {
+
+            console.log("false")
+            return false
+        }
+        else {
+            console.log("true")
+            let role = 'ADMIN';
+            const accessToken = await signAccessToken(role)
+            res.send({ accessToken })
+        }
+
+    }
+
+
+
+    catch (error) {
+        console.log(error)
+    }
+})
 
 
 
