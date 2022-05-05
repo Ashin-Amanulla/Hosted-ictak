@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { signAccessToken,
-    signRefreshToken,
-    verifyRefreshToken } = require('../helpers/jwt_helper')
+const { signAccessToken} = require('../helpers/jwt_helper')
 
 //! Currently deactivated since a bug has occured after hosting.Please refer news route 
 
@@ -12,8 +10,8 @@ router.post('/login', async (req, res, next) => {
 
     try {
 
-        let email = req.body.data.email;
-        let password = req.body.data.password
+        let email = req.body.email;
+        let password = req.body.password
 
         if (email != 'admin@ictak' || password != 'ictakAdmin@12345') {
 

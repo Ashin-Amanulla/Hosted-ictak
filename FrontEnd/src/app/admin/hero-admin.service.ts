@@ -197,6 +197,6 @@ export class HeroAdminService {
 
 
   loginCheck(data: any) {
-    return this.http.post<any>(`${this.server_address}/news/signInCheck`, { data: data });
+    return this.http.post<any>(`${this.server_address}/auth/login`, data);
   }
 }

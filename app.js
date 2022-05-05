@@ -13,13 +13,14 @@ app.use(express.static('public'));
 
 
 // Routes 
+const auth = require('./routes/login')
+
 const course = require('./routes/course');
 const staff = require('./routes/staff');
 const review = require('./routes/review')
 const blog = require('./routes/blog')
 const news = require('./routes/news')
 const am = require('./routes/academicMembership')
-// const auth = require('./routes/login')
 
 
 
@@ -54,6 +55,8 @@ app.use(function (req, res, next) {
 
 
 //Use route
+app.use('/api/auth',auth)
+
 
 app.use('/api/course', course);
 app.use('/api/staff', staff);
@@ -61,7 +64,6 @@ app.use('/api/review', review)
 app.use('/api/blog',blog)
 app.use('/api/news',news)
 app.use('/api/am',am)
-// app.use('/api/auth',auth)
 
 
 
