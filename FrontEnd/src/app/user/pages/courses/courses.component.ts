@@ -64,7 +64,6 @@ partners:any
           .subscribe(data => {
             this.course = data;
             this.partners=data[0].showboxArray
-            console.log("partners", this.partners)
 
             //to get reviews
             this._heroService.getReviews(this.course[0].title)

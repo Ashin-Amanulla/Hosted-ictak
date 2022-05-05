@@ -6,7 +6,7 @@ const { signAccessToken,
     verifyRefreshToken } = require('../helpers/jwt_helper')
 
 
-router.post('/', async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
 
     try {
 

@@ -19,7 +19,7 @@ const review = require('./routes/review')
 const blog = require('./routes/blog')
 const news = require('./routes/news')
 const am = require('./routes/academicMembership')
-const login = require('./routes/login')
+const auth = require('./routes/login')
 
 
 
@@ -61,7 +61,7 @@ app.use('/api/review', review)
 app.use('/api/blog',blog)
 app.use('/api/news',news)
 app.use('/api/am',am)
-app.use('/api/login',login)
+app.use('/api/auth',auth)
 
 
 

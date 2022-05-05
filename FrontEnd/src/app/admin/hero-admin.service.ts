@@ -197,6 +197,6 @@ deleteSub(subID: any){
 
 
 loginCheck(data:any){
-  return this.http.post<any>(`${this.server_address}/login`,{data:data});
+  return this.http.post<any>(`${this.server_address}/auth/login`,{data:data});
 }
 }

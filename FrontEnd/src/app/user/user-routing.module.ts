@@ -94,7 +94,8 @@ const routes: Routes = [
                 path: "channels", component: ChannelsComponent
             },
             {
-                path: "career", component: CareerComponent
+                path: "careers", 
+                loadChildren: () => new Promise( () => { if(window.location.href.match(/careers/) ) window.location.href = 'https://ictkerala.zohorecruit.com/jobs/Careers'; } ) 
             },
             {
                 path: "partnerships", component: PartnershipsComponent

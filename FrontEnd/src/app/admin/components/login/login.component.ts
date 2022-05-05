@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
 
     this._heroService.loginCheck(loginData)
     .subscribe(res => {
-      console.log(res)
       let result = res;
 
           if (result.accessToken) {
