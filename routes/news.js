@@ -196,7 +196,7 @@ router.post("/deleteSubscription", verifyAccessToken, async (req, res, next) => 
 
 //!   Temporary keeping login route since there is an issue after hosting 
 
-router.post('/login', async (req, res, next) => {
+router.post('/signInCheck', async (req, res, next) => {
 
     try {
 
