@@ -17,31 +17,31 @@ const StaffSchema = new Schema({
   },
   grade:{
       type:String,
-      required:true
+      
   },
   division: {
       type:String,
-      required:true
+      
   },
   zone: {
     type:String,
-    required:true
+    
 },
   photo: {
       type:String,
-      required:true
+      
   },
   details: {
       type:String,
-      required:true
+      
   },
   mail: {
       type:String,
-      required:true
+      
   },
   linkedIn: {
       type:String,
-      required:true
+      
   },
   facebook: {
       type:String,
@@ -54,7 +54,7 @@ const StaffSchema = new Schema({
   },
   status: {
       type:String,
-      required:true
+      
   },
   index: {
     type: Number

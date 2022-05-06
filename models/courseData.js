@@ -9,70 +9,70 @@ const CourseSchema = new Schema({
     },
     code: {
         type: String,
-        required: true
+       
     },
     category: {
         type: String,
-        required: true
+       
     },
     sub: {
         type: String,
     },
     image: {
         type: String,
-        required: true
+        
     },
     details: {
         type: String,
-        required: true
+        
     },
     duration_months: {
         type: String,
-        required: true
+        
     },
     duration_internship: {
         type: String,
-        required: true
+        
     },
     mode: {
         type: String,
-        required: true
+        
     },
     fees: {
         type: String,
-        required: true
+        
     },
     brochure: {
         type: String,
-        required: true
+        
     },
     course_certificate: {
         type: String,
-        required: true
+        
     },
     internship_certificate: {
         type: String,
-        required: true
+        
     },
     placement_list: {
         type: String,
-        required: true
+        
     },
     objectives: {
         type: String,
-        required: true
+        
     },
     highlights: {
         type: String,
-        required: true
+        
     },
     test: {
         type: String,
-        required: true
+        
     },
     eligibility: {
         type: String,
-        required: true
+        
     },
     agenda: {
         type: String,

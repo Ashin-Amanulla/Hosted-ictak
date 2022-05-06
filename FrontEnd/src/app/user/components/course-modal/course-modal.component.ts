@@ -12,7 +12,7 @@ export class CourseModalComponent implements OnInit {
 
   constructor(private _heroService: HeroUserService, private _router: Router) { }
 
-  courses: any;
+  courses: any[]=[];
 
   @Output() emitData = new EventEmitter<String>();
 
@@ -31,6 +31,8 @@ export class CourseModalComponent implements OnInit {
       this._router.navigate(['/course'],{ queryParams: { code: code }});
     })
   }
+
+
 
 }
 

@@ -28,8 +28,9 @@ export class LoginComponent implements OnInit {
   })
 
   login(){
+
     let loginData = this.Login.value;
-console.log("test login")
+console.log("test login" ,loginData)
     this._heroService.loginCheck(loginData)
     .subscribe(res => {
       let result = res;
